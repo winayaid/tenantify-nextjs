@@ -5,16 +5,18 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "prisma generate && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prisma:seed": "node --loader ts-node/esm prisma/seed.ts"
+    "prisma:seed": "node --loader ts-node/esm prisma/seed.ts",
+    "vercel-build": "prisma generate && next build"
   },
   "dependencies": {
     "@prisma/client": "5.22.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-toast": "^1.2.2",
     "@shadcn/ui": "^0.0.4",
+    "@vercel/postgres": "^0.10.0",
     "axios": "^1.7.8",
     "bcrypt": "^5.1.1",
     "class-variance-authority": "^0.7.1",
